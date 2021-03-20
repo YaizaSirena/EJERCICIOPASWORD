@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJERCICIO3PASCAL", "EJERCICIO3PASCAL\EJERCICIO3PASCAL.csproj", "{81D2109F-A441-4019-A85D-B71BABA4B265}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81D2109F-A441-4019-A85D-B71BABA4B265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81D2109F-A441-4019-A85D-B71BABA4B265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81D2109F-A441-4019-A85D-B71BABA4B265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81D2109F-A441-4019-A85D-B71BABA4B265}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAA4255E-BACD-4C97-955F-A2BF1BC2C38D}
+	EndGlobalSection
+EndGlobal
