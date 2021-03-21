@@ -10,7 +10,7 @@ namespace EJERCICIO3PASCAL
     {
         public int Longitud { get; set; } 
         public string Contraseña { get; set; }
-        private string LETRAS = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
+        private string Letras = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
         public Pasword()
         {
             Longitud = 8;
@@ -21,32 +21,33 @@ namespace EJERCICIO3PASCAL
             Longitud = LongitudPa;
             Contraseña = ""; //aleatoria con Longitud que le pasemos.
         }
-
-        public void asignarContrasenya()
+        Random r1 = new Random();
+        public void generarPasword()
         {
-            
-            Random r1 = new Random();
-            r1.Next(0, Longitud);
 
             for (int i = 0; i < Longitud; i++)
             {
-
+                Contraseña += Letras.Substring(r1.Next(0, Letras.Length), 1);
             }
+        }
+
+        public bool esFuerte()
+        {
+            int mayusculas = 0;
+            int minusculas = 0;
+            int numeros = 0;
+
+            for (int i = 0; i < Contraseña.Length; i++)
+            {
+                if (char.IsUpper(Contraseña[i])) mayusculas++;
+                if (char.IsLower(Contraseña[i])) minusculas++;
+                if (char.IsNumber(Contraseña[i])) numeros++;
+
+                if ((mayusculas >= 2) && minusculas >=1 && numeros >=1 ) { return true; }
+            }
+            return false;
         }
        
 
-       
-
     }
-//    Haz una clase llamada Password que siga las siguientescondiciones:
-//Que tenga los atributos longitud y contraseña.Por defecto, la longitud sera de8.
-//Los constructores serán lossiguiente:
-//Un constructor pordefecto.
-//Un constructor con la longitud que nosotros le pasemos.Generara una contraseña aleatoria con esa longitud.
-//Los métodos que implementaserán:
-//esFuerte(): devuelve un booleano si es fuerte o no, para que sea fuerte debe tener mas de 2 mayúsculas, mas de 1 minúscula y mas de 5números.
-//generarPassword(): genera la contraseña del objeto con la longitudque
-//tenga.
-//Método get para contraseña ylongitud.
-//Método set paralongitud.
 }
