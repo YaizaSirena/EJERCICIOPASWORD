@@ -11,20 +11,22 @@ namespace EJERCICIO3PASCAL
         public int Longitud { get; set; } 
         public string Contraseña { get; set; }
         private string Letras = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnÑñOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
+        
         public Pasword()
         {
             Longitud = 8;
             generarPasword();
         }
+        
         public Pasword(int LongitudPa)
         {
             Longitud = LongitudPa;
             generarPasword();
         }
+        
         Random r1 = new Random();
         public void generarPasword()
         {
-
             for (int i = 0; i < Longitud; i++)
             {
                 Contraseña += Letras.Substring(r1.Next(0, Letras.Length), 1);
@@ -47,8 +49,5 @@ namespace EJERCICIO3PASCAL
             }
             return false;
         }
-
-
-
     }
 }

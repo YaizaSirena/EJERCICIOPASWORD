@@ -13,8 +13,7 @@ namespace EJERCICIO3PASCAL
             Console.Write("Introduce la longitud del array: ");
             int longitudArray = Convert.ToInt32(Console.ReadLine());
             Pasword [] arrayContrasenyas = new Pasword[longitudArray];
-            Pasword[] arrayBooleanos = new Pasword[longitudArray];
-
+            Boolean[] arrayBooleanos = new Boolean[longitudArray];
 
             for (int i = 0; i < longitudArray; i++)
             {
@@ -23,20 +22,12 @@ namespace EJERCICIO3PASCAL
 
                 arrayContrasenyas[i] = new Pasword(longitudContrasenya);
                 Console.WriteLine(arrayContrasenyas[i].Contraseña) ;
-                arrayBooleanos[i] = new Pasword(longitudContrasenya);
-                arrayBooleanos[i].esFuerte();
-                Console.WriteLine("contraseña{0},", i+1, arrayBooleanos[i].esFuerte()? "true" : "false");
+
+                arrayBooleanos[i] = arrayContrasenyas[i].esFuerte();
+                Console.WriteLine("Contraseña {0} : {1}", i + 1, arrayBooleanos[i]);
             }
-
-
-
 
             Console.ReadLine();
         }
     }
- 
-    //Crea otro array de booleanos donde se almacene si el password del array de Password es o no fuerte(usa el bucleanterior).
-    //Al final, muestra la contraseña y si es o no fuerte(usa el bucle anterior).Usa
-    //este simpleformato:
-    //contraseña1 valor_booleano1 contraseña2valor_bololeano2
 }
