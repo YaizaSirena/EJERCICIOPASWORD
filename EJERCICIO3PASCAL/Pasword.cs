@@ -14,12 +14,12 @@ namespace EJERCICIO3PASCAL
         public Pasword()
         {
             Longitud = 8;
-            Contraseña = ""; //Generar aleatroriamente.
+            generarPasword();
         }
         public Pasword(int LongitudPa)
         {
             Longitud = LongitudPa;
-            Contraseña = ""; //aleatoria con Longitud que le pasemos.
+            generarPasword();
         }
         Random r1 = new Random();
         public void generarPasword()
@@ -47,7 +47,8 @@ namespace EJERCICIO3PASCAL
             }
             return false;
         }
-       
+
+
 
     }
 }
