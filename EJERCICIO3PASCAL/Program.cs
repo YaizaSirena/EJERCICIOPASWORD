@@ -21,7 +21,7 @@ namespace EJERCICIO3PASCAL
                 int longitudContrasenya = Convert.ToInt32(Console.ReadLine());
 
                 arrayContrasenyas[i] = new Pasword(longitudContrasenya);
-                Console.WriteLine(arrayContrasenyas[i].Contraseña) ;
+                Console.WriteLine(arrayContrasenyas[i].Contrasenya) ;
 
                 arrayBooleanos[i] = arrayContrasenyas[i].esFuerte();
                 Console.WriteLine("Contraseña {0} : {1}", i + 1, arrayBooleanos[i]);
